@@ -27,7 +27,7 @@ createApp({
               })
               
             }
-            console.log(list);
+            console.log(this.list);
             
     }
   },
