@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto;
+    width: 50%;
+    height: 80vh;
+    
+}
+
+.chat_header, .main_chat_box{
+    border: 1px solid black;
+}
+
+.main_chat_box{
+    flex-grow: 2;
+    
+}
+
+.chat_footer, .chat_header{
+    text-align: center;
+    padding: 1rem;
+    background-color: blueviolet;
+}
