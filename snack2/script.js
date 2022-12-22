@@ -18,16 +18,21 @@ createApp({
   },
   methods:{
     getRandomPerson(){
-        axios.get('https://flynn.boolean.careers/exercises/api/random/name')
-          .then(function (response) {
-              console.log(response.data.response);
+        for(i=0; i<10; i++){
+            axios.get('https://flynn.boolean.careers/exercises/api/random/name')
+              .then( (response) => {
+                  console.log(response.data.response);
+                  this.list.push(response.data.response);
+                
+              })
+              
+            }
+            console.log(list);
             
-          })
-
     }
   },
   created(){
-    this.getRandomPerson()
+    this.getRandomPerson();
     
   }
 }).mount('#app')
