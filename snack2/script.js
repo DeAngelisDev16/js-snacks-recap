@@ -13,6 +13,8 @@ createApp({
   data() {
     return {
         list:[],
+        userInput:'',
+        isUserInvited: false,
       
     }
   },
@@ -29,6 +31,12 @@ createApp({
             }
             console.log(this.list);
             
+    },
+    nameCheck(userInput){
+      if(this.list.includes(this.userInput)){
+        this.isUserInvited = true;
+      }
+
     }
   },
   created(){

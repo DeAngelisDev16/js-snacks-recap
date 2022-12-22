@@ -10,12 +10,16 @@
 <body>
 
     <div id="app">
-        <input type="text" size="50" placeholder="Inserisci il tuo nome">
-        <div>
+        <input type="text" size="50" placeholder="Inserisci il tuo nome e cognome" v-model.trim="userInput">
+        <button @click="nameCheck(userInput)">Invia</button>
+       <!--  <div>
             <ul v-for="name in list">
                 <li>{{name}}</li>
             </ul>
-        </div>
+        </div> -->
+        <p v-if="!isUserInvited">Spiacenti, il tuo nome non è stato trovato;</p>
+        <p v-else> Ciao, {{userInput}}, bentornato/a.</p>
+
         
     </div>
 
