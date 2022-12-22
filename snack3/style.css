@@ -27,3 +27,24 @@
     padding: 1rem;
     background-color: blueviolet;
 }
+
+.message{
+    clear:both;
+    width: 30%;
+    text-align: center;
+    padding: .5rem;
+    border-radius: 5%;
+    margin: 1rem;
+}
+
+.sent{
+    background-color: green;
+    float: right;
+}
+
+.received{
+    background-color: lightgray;
+    float: left;
+
+}
+
