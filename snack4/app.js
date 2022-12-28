@@ -14,6 +14,14 @@ createApp({
             axios.get('https://flynn.boolean.careers/exercises/api/array/integers?min=1&max=100&items=' + itemNumber)
                 .then((response) => {
                     console.log(response.data.response);
+                    const numbers = response.data.response;
+                    let sum = 0;
+                    numbers.forEach(element => {
+                        sum += element;
+                        console.log(sum);
+
+                    });
+
 
 
                 })
