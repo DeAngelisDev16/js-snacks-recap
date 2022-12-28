@@ -26,12 +26,23 @@ createApp({
   },
   methods: {
     addNewMessage(content) {
-      messageObj = {
+      const messageObj = {
         text: this.myInput,
         status: 'sent',
-      },
-        this.messages.push(messageObj);
+      }
+      this.messages.push(messageObj);
       this.myInput = '';
+      axios.get('https://flynn.boolean.careers/exercises/api/random/sentence')
+        .then((response) => {
+          console.log(response.data.response);
+          const newReceivedMessage = {
+            text: response.data.response,
+            status: 'received'
+          }
+          this.messages.push(newReceivedMessage)
+
+
+        })
 
     }
 
@@ -47,8 +58,3 @@ createApp({
  differenziando i messaggi utente da quelli del computer. */
 
 
-/* axios.get('/user?ID=12345')
- .then(function (response) {
-   // handle success
-   console.log(response);
- }) */
